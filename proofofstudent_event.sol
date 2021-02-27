@@ -122,18 +122,6 @@ contract ProofOfStudent {
         
         return;
     }
-    
-     //Pan Fried Egg
-    if (msg.value != 0.0035 ether && hashing(name) == hashing("Pan Fried Egg")) {
-        
-        emit OrderError(msg.sender, name, 
-            "Incorrect amount of Ether. 0.0035 ether for registration");
-        
-        
-        msg.sender.transfer(msg.value);
-        
-        return;
-    }
 
    
     Ordersdata memory orderdata = Ordersdata(name, block.timestamp, msg.sender);
